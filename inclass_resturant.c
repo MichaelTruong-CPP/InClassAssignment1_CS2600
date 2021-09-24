@@ -9,6 +9,8 @@
       -display using printf
 */
 
+//TIP AFTER TAX
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -26,35 +28,35 @@ int main () {
    double tip;
    double totalBill;
    printf("Enter tax rate as percentage: ");
-   scanf("%f", &tax_rate);
+   scanf("%lf", &tax_rate);
    printf("Enter tip rate as percentage: ");
-   scanf("%f", &tip_rate);
+   scanf("%lf", &tip_rate);
    tax_rate = tax_rate / 100;  //convert percentage to decimal
    tip_rate = tip_rate / 100;
    srand((unsigned) time(&t));  // Intializes random number generator 
    int randomOrder= rand() % 4;
    if (randomOrder == 0) { //random order is salad
       tax = salad_price*tax_rate;
-      tip = salad_price*tip_rate;
-      totalBill = salad_price + tax + tip;
+      totalBill = salad_price + tax;
+      totalBill = (totalBill*tip_rate) + totalBill;
       printf("\nTotal bill of ordering salad: %.2f", totalBill);
    }
-   else if (randomOrder == 1) { //random order is salad
+   else if (randomOrder == 1) { //random order is soup
       tax = soup_price*tax_rate;
-      tip = soup_price*tip_rate;
-      totalBill = soup_price + tax + tip;
+      totalBill = soup_price + tax;
+      totalBill = (totalBill*tip_rate) + totalBill;
       printf("\nTotal bill of ordering soup: %.2f", totalBill);
    }
-   else if (randomOrder == 2) { //random order is salad
+   else if (randomOrder == 2) { //random order is sandwich
       tax = sandwich_price*tax_rate;
-      tip = sandwich_price*tip_rate;
-      totalBill = sandwich_price + tax + tip;
+      totalBill = sandwich_price + tax;
+      totalBill = (totalBill*tip_rate) + totalBill;
       printf("\nTotal bill of ordering sandwich: %.2f", totalBill);
    }
-   else if (randomOrder == 3) { //random order is salad
+   else if (randomOrder == 3) { //random order is pizza
       tax = pizza_price*tax_rate;
-      tip = pizza_price*tip_rate;
-      totalBill = pizza_price + tax + tip;
+      totalBill = pizza_price + tax;
+      totalBill = (totalBill*tip_rate) + totalBill;
       printf("\nTotal bill of ordering pizza: %.2f", totalBill);
    }
    
