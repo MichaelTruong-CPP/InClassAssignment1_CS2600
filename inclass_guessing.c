@@ -35,8 +35,8 @@
 
 //SOME CODE IS COMMENTED OUT BECAUSE IT IS FOR THE SAVED USER MAX NUMBER IMPLEMENTATION
 
-//int get_saved_user_max_number();
-//void edit_saved_user_max_number(int max_number);
+int get_saved_user_max_number();
+void edit_saved_user_max_number(int max_number);
 
 int main() {
     time_t t;
@@ -50,8 +50,8 @@ int main() {
     scanf("%s", &keyPress);
     while (strcmp(keyPress, "3") != 0) {
         srand((unsigned) time(&t));
-        int randomNumber= rand() % default_max_number;
-        //int randomNumber= rand() % get_saved_user_max_number();
+        //int randomNumber= rand() % default_max_number;
+        int randomNumber= rand() % get_saved_user_max_number();
         randomNumber++;
         char random[100];
         sprintf(random, "%d", randomNumber);  //convert from int to char[]
@@ -81,7 +81,7 @@ int main() {
                 printf("Enter new max number no greater than 10: ");
                 scanf("%d", &default_max_number);
             }
-            //edit_saved_user_max_number(default_max_number);
+            edit_saved_user_max_number(default_max_number);
             goto menu;
         }
         else {
@@ -93,7 +93,7 @@ int main() {
 
 }
 
-/*
+
 int get_saved_user_max_number() {
     FILE *fp;
     char buff[255];
@@ -121,4 +121,3 @@ void edit_saved_user_max_number(int max_number) {
      
     fclose(fp);
 }
-*/
