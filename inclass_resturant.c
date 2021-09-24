@@ -39,25 +39,25 @@ int main () {
       tax = salad_price*tax_rate;
       totalBill = salad_price + tax;
       totalBill = (totalBill*tip_rate) + totalBill;
-      printf("\nTotal bill of ordering salad: %.2f", totalBill);
+      printf("\nTotal bill of ordering salad: $%.2f", totalBill);
    }
    else if (randomOrder == 1) { //random order is soup
       tax = soup_price*tax_rate;
       totalBill = soup_price + tax;
       totalBill = (totalBill*tip_rate) + totalBill;
-      printf("\nTotal bill of ordering soup: %.2f", totalBill);
+      printf("\nTotal bill of ordering soup: $%.2f", totalBill);
    }
    else if (randomOrder == 2) { //random order is sandwich
       tax = sandwich_price*tax_rate;
       totalBill = sandwich_price + tax;
       totalBill = (totalBill*tip_rate) + totalBill;
-      printf("\nTotal bill of ordering sandwich: %.2f", totalBill);
+      printf("\nTotal bill of ordering sandwich: $%.2f", totalBill);
    }
    else if (randomOrder == 3) { //random order is pizza
       tax = pizza_price*tax_rate;
       totalBill = pizza_price + tax;
       totalBill = (totalBill*tip_rate) + totalBill;
-      printf("\nTotal bill of ordering pizza: %.2f", totalBill);
+      printf("\nTotal bill of ordering pizza: $%.2f", totalBill);
    }
    
    
