@@ -78,7 +78,7 @@ int main() {
             printf("Enter new max number no greater than 10 and no less than 1: ");
             scanf("%d", &default_max_number);
             while (default_max_number > 10 || default_max_number < 1) {
-                printf("Enter new max number no greater than 10: ");
+                printf("Enter new max number no greater than 10 and no less than 1: ");
                 scanf("%d", &default_max_number);
             }
             edit_saved_user_max_number(default_max_number);
