@@ -57,7 +57,7 @@ int main () {
       tax = pizza_price*tax_rate;
       totalBill = pizza_price + tax;
       totalBill = (totalBill*tip_rate) + totalBill;
-      printf("\nTotal bill of ordering pizza: %.2f", totalBill);
+      printf("\nTotal bill of ordering pizza: $%.2f", totalBill);
    }
    
    
